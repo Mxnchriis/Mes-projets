@@ -1,0 +1,49 @@
+import random
+Joueur1 est definie actif
+Joueur2 est definie non actif
+Bas.Echelle = [4, 13, 33, 42, 50, 62, 74]
+Sommet.Echelle = [25, 46, 49, 63, 69, 81, 92]
+Tête.Serpent = [27, 40, 43, 54, 66, 76, 89, 99]
+Queue.Serpent = [5, 3, 18, 31, 45, 58, 53, 41]
+
+
+Tant que un Joueur n'a pas atteint la case 100 alors
+    Si Joueur1 est actif alors
+        dé = random.randint(1,6) 
+        Joueur1 lancera le dé
+        la valeur du dé correspondera au deplacement de Joueur1
+        passer Joueur1 non actif
+        et passer Joueur2 actif
+    sinon si 
+        Joueur2 est actif alors
+        dé = random.randint(1,6) 
+        Joueur2 lancera le dé
+        la valeur du dé correspondera au deplacement de Joueur1
+        passer Joueur2 non actif
+        et passer Joueur1 actif
+    
+    si Joueur.case == Bas.Echelle alors
+        Joueur va se déplacer jusqu'a Sommet.Echelle
+
+    si Joueur.case == Tête.Serpent alors
+        Joueur va se déplacer jusqu'a Queue.Serpent
+
+    si Joueur.case == case[100] alors
+        Game Stop 
+        print (f"{Joueur} a gagné !")
+
+
+
+# Brouillon
+def update(self, pressed_keys):
+        if self.rect.right > Screen_widht:
+            if pressed_keys[K_z]:
+                self.rect.move_ip(0, -5)
+        if right == True:
+            if pressed_keys[K_d]:
+                self.rect.move_ip(5, 0)
+        if self.rect.move_ip > self.rect.move_ip(0, -10):
+            right = False
+            up = False
+            if pressed_keys[K_q]:
+                self.rect.move_ip(-5, 0)

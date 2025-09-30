@@ -1,0 +1,21 @@
+Développement jeu serpent et échelle
+
+- Méchanique de dé
+	Affichage du dé - Affichage
+	Animation du dé - Affichage et Animation
+	Valeur de retour du dé - Logique de Jeu
+	Bouton lancé de dé - UI et intéractivité
+-Plateau
+	Grille du plateau - Affichage
+	Positionnement des cases - Affichage et logique de jeu
+	Pose de pion sur une case - Affichage
+- Déplacement des pions
+	Placement par une valeur fixe - Logique de jeu
+	Reculer - Logique de jeu
+	Echelle - Logique de jeu
+	Serpent - Logique de jeu
+-Condition de Victoire
+	Case 100 - Logique de jeu
+-Joker
+	Action Joker - Logique de jeu, UI et intéractivité
+	Limitation des ressources - Logique de jeu
