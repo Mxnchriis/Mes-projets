@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "msedge",
+            "request": "launch",
+            "name": "Launch PokeApi.html",
+            "url": "http://localhost:8080/PokeApi.html",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "start-server"
+        }
+    ]
+}
