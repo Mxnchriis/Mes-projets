@@ -1,0 +1,11 @@
+@import './Body.css';
+
+@media (max-width: 600px) {
+  .mainimg, .image-wrapper {
+    max-width: 98vw;
+    min-width: 0;
+    border-radius: 4px;
+    object-fit: cover;
+    object-position: center;
+  }
+}

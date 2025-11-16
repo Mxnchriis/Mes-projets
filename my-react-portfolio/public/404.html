@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Redirecting...</title>
+    <script>
+      // Redirige vers la bonne route en gardant l'URL
+      const redirectTo = location.pathname + location.search + location.hash;
+      sessionStorage.redirect = redirectTo;
+      window.location.href = '/';
+    </script>
+  </head>
+  <body></body>
+</html>

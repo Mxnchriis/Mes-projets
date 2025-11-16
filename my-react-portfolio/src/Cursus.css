@@ -1,0 +1,158 @@
+@import './Body.css';
+
+.parcour-history {
+    position: relative;
+    padding: 5rem;
+}
+
+.gradiation-bar {
+    position: absolute;
+    left: 19.6%;
+    width: 0.3rem;
+    height: 95%;
+    background: linear-gradient(aqua, lightblue, blue);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.period-circle {
+    height: 25px;
+    padding: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#MDS{
+  background-color: rgb(40, 188, 214);
+}
+
+#NASDY {
+  background-color: rgb(74, 186, 206);
+}
+
+#ISP2 {
+  background-color: rgb(121, 195, 213);
+}
+
+#ISP {
+  background-color: rgb(116, 184, 207);
+}
+
+#LSDN {
+  background-color: rgb(35, 89, 205);
+}
+
+#Bac {
+  background-color: blue;
+}
+
+#period-box {
+    gap: 5rem;
+    margin: 5rem auto;
+    z-index: 100;
+}
+
+#period-box img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+    padding: 0;
+}
+
+.period-content {
+  display: flex;
+  flex-direction: column;
+
+  /* Style carte */
+  border: 1px solid white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* ombre douce */
+  width: 40vw;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+body.light-mode .period-content {
+  border: 1px solid rgb(12, 12, 12);
+}
+
+.period-content:hover {
+  transform: translateY(-4px); /* petit effet flottant */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+
+#MDS-content:hover{
+  border: 1px solid rgb(40, 188, 214);
+}
+
+#NASDY-content:hover {
+  border: 1px solid rgb(74, 186, 206);
+}
+
+#ISP2-content:hover {
+  border: 1px solid rgb(121, 195, 213);
+}
+
+#ISP-content:hover {
+  border: 1px solid rgb(116, 184, 207);
+}
+
+#LSDN-content:hover {
+  border: 1px solid rgb(35, 89, 205);
+}
+
+#Bac-content:hover {
+  border: 1px solid blue;
+}
+
+/* Titres hiérarchisés */
+.period-content h2 {
+  font-size: 1.4rem;
+  color: #173651;
+  margin-bottom: 0.5rem;
+}
+
+.period-content h3 {
+  font-size: 1.1rem;
+  color: #3399ff;
+  margin-bottom: 0.3rem;
+}
+
+.period-content h4 {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0.2rem 0;
+}
+
+.period-content p {
+  font-size: 0.9rem;
+  color: #888888;
+  margin-top: 0.8rem;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 600px) {
+  .parcour-history{
+    width: 80vw;
+    padding: 0;
+  }
+
+  .gradiation-bar{
+    left: 12%;
+  }
+
+  #period-box{
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .gradiation-bar{
+    left: 11%;
+  }
+}

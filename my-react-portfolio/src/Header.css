@@ -1,0 +1,199 @@
+.header {
+    width: 100%;
+    align-items: center;
+}
+
+.navbar {
+    position: fixed;
+    z-index: 750;
+    left: 50%;
+    top: 1rem;
+    transform: translateX(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+
+    width: fit-content;
+    border-radius: 10px;
+
+    background-color: rgba(75, 171, 255, 0.416);
+    border: 1px solid rgba(75, 171, 255, 0.416);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.navbar button {
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    font-size: medium;
+    border-radius: 4px;
+    background: none;
+    transition: background 0.2s;
+}
+
+body.light-mode .navbar button {
+    color: #000;
+}
+
+.navbar button:hover,
+.navbar button.active {
+    background: rgba(75, 171, 255, 0.7);
+    color: #fff;
+}
+
+.toggle-icon {
+    width: 20px;
+    height: 20px;
+    margin: 0.5rem;
+    object-fit: cover;
+    object-position: center;
+    cursor: pointer;
+    padding: 5px;
+    border: solid 0.1px #888888;
+    border-radius: 50%;
+    background-color: white;
+}
+
+body.light-mode .toggle-icon {
+    border: solid 0.1px #555555;
+    background-color: #0c0f24;
+}
+
+/* Hamburger styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    z-index: 1001;
+}
+
+.hamburger span, .hamburger span:before, .hamburger span:after {
+    display: block;
+    background: white;
+    height: 4px;
+    width: 28px;
+    border-radius: 2px;
+    position: relative;
+    transition: all 0.3s;
+}
+
+body.light-mode .hamburger span, body.light-mode .hamburger span:before, body.light-mode .hamburger span:after {
+    background: #000;
+}
+
+.hamburger span:before,
+.hamburger span:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.hamburger span:before {
+    top: -9px;
+}
+.hamburger span:after {
+    top: 9px;
+}
+
+/* Responsive styles */
+@media (max-width: 800px) {
+    .header {
+        height: auto;
+        padding-bottom: 0.5rem;
+    }
+
+    .navbar {
+        font-size: 0.5rem;
+        padding: 0.3rem 0.2rem;
+    }
+    .navbar nav {
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .header-title h1 {
+        font-size: 1.1em;
+    }
+    .header-title h2 {
+        font-size: 0.8em;
+    }
+    .navbar {
+        font-size: 0.75rem;
+        flex-direction: row !important; /* Force horizontal */
+        align-items: center;
+        justify-content: center;
+        padding: 0.2rem 0.1rem;
+        width: 100vw;
+    }
+    .navbar nav {
+        flex-direction: row !important; /* Force horizontal */
+        gap: 0.5rem;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar a {
+        padding: 0.4rem 0.6rem;
+        font-size: small;
+        width: auto;
+        display: inline-block;
+    }
+    /* Mobile: cache la navbar, affiche le hamburger */
+    .navbar {
+        display: none !important;
+    }
+    .navbar.open {
+        display: flex !important;
+        flex-direction: column !important;
+        position: fixed;
+        top: 60px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 70vw;
+        text-align: center;
+        /* margin: 0 auto; */
+        background: rgba(75, 171, 255, 0.701);
+        border: 5px solid rgba(132, 132, 132, 0.416);
+        border-radius: 15px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+        z-index: 1000;
+        padding: 0;
+    }
+    .navbar nav {
+        flex-direction: column !important;
+        gap: 1rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .navbar button {
+        font-size: 1rem;
+        padding: 0.6rem 0;
+        width: 100%;
+        color: rgb(255, 255, 255);
+        /* background-color: rgba(255, 255, 255, 0.658); */
+    }
+    
+    .hamburger {
+        display: flex;
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+    }
+}

@@ -1,0 +1,343 @@
+@import './Body.css';
+
+#skills-container {
+  max-width: 80%;
+  margin: 2rem auto;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3rem;
+  justify-content: center;
+}
+
+#skill-box {
+  position: relative;
+  width: 15vw;
+  height: 300px;
+  border-radius: 50px;
+  padding: 3rem;
+  font-size: medium;
+  text-align: left;
+  display: flex;
+  align-items: left;
+  background: linear-gradient(180deg, #071021 0%, #11283a 60%, #0b1926 100%);
+  box-shadow: 0 0 3px rgba(32, 32, 32, 0.443);
+  overflow: visible;
+  z-index: 222;
+}
+
+#skill-box h2 {
+  margin: 0.5rem 0;
+}
+
+#skill-box p {
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 0;
+}
+
+body.light-mode #skill-box {
+  background: linear-gradient(180deg, #c2d8ed 0%, #e9f6ff 60%, #d7eef8 100%);
+}
+
+#skill-box:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
+}
+
+#skill-box img {
+    background-color: whitesmoke;
+    padding: 0.5rem;
+    border-radius: 8px;
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+#skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.5rem;
+  padding: 0;
+  margin: 2rem 0 0 0;
+  list-style: none;
+}
+
+#skills-list li {
+  flex: 0 1 auto;
+  padding: 5px;
+  width: fit-content;
+  text-align: center;
+  font-weight: 600;
+  border-radius: 10px;
+  color: white;
+  background: linear-gradient(90deg, #3399ff 0%, #173651 100%);
+  box-shadow: 0 0 10px rgba(32, 32, 32, 0.443);
+  min-width: 30px;
+}
+
+.carrousel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 3rem;
+  margin-bottom: 0;
+}
+
+.carrousel-bloc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.carrousel-bloc img {
+  width: 125px;
+  height: 125px;
+  object-fit: contain;
+  margin: 0 20px;
+}
+
+.mainlogo {
+  width: 150px;
+  padding-bottom: 5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.mainlogo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.mainlogo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.programName {
+  color: white;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+body.light-mode .programName {
+  color: black;
+}
+
+.group-card-language{
+  display: flex;
+  flex-direction: row;
+  gap: 7rem;
+  padding-left: 100%;
+  animation: slide-forever 60s linear infinite;
+}
+
+@keyframes slide-forever{
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-450%);
+  }
+}
+
+.card-language{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-right: 1rem;
+  align-items: center;
+  border-radius: 6px;
+  width: fit-content;
+}
+
+.card-language img{
+  width: 75px;
+  height: 75px;
+  padding: 2rem;
+  object-fit: contain;
+  transition: filter 300ms;
+}
+.card-language img:hover {
+  filter: drop-shadow(0 0 2em #2f38dfaa);
+}
+
+  #outils {
+    padding-top: 0;
+  }
+
+.grid-app {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 0.2rem;
+}
+
+#gridapp1 {
+  grid-template-columns: 2fr 1fr;
+}
+
+#gridapp2 {
+  grid-template-columns: 1fr 1fr 2fr;
+}
+
+.dev-app-box {
+  /* height: 600px; */
+  padding: 1rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  background-position: center;
+  background-size: cover;
+  align-items: flex-end;
+  /* filter: blur(0.5px); */
+}
+
+.dev-app-box:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s;
+}
+
+#vscode {
+  background-image: url("https://media.licdn.com/dms/image/v2/D4D12AQHT0EfN-GbTTw/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1709732349047?e=2147483647&v=beta&t=GXFtgU8Sa-3HsEFuyLX-1jbyDFdhAgvz1Vh7l7LKPK8");
+}
+
+#git {
+  background-image: url('./assets/img/Github-img.png');
+}
+
+#figma{
+  background-image: url("https://framerusercontent.com/images/nAnYgtUdJOsiobcu2xDPPngHo.png?width=2400&height=1284");
+}
+
+#vm {
+  background-image: url("https://i.ytimg.com/vi/YNKPem3aDPA/maxresdefault.jpg");
+}
+
+#nocode {
+  background-image: url("https://www.intelivita.com/wp-content/uploads/2023/05/Top-No-Code-Website-Builders.png");
+}
+
+#ia {
+  background-image: url("https://cloud-cover.me/hubfs/microsoft%20copilot%20vs%20chatgpt%20openai.jpg");
+}
+
+#ue5 {
+  background-image: url("https://media.licdn.com/dms/image/v2/D5612AQHCt3fx8twdkg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1712556446716?e=2147483647&v=beta&t=NoT6WlgyB427x5_T1MdN7BvueSnezxmGjXSNG3EtqQM");
+}
+
+#office {
+  background-image: url("https://www.silviodibenedetto.com/wp-content/uploads/2020/07/hero_o365_v2.jpg");
+}
+
+.dev-app-content {
+  position: relative;
+  top: 50%;
+  /* border: 1px solid #cccccc63; */
+  border-radius: 2px;
+  transform: translateY(-50%);
+  padding: 2rem;
+  background-color: #0e181d6f;
+}
+
+#h3dev{
+  color: white;
+}
+
+.dev-app-content p {
+  color: rgb(255, 255, 255);
+}
+
+
+
+@media (max-width: 600px) {
+    
+    #skills-container {
+        grid-template-columns: 1fr;
+        max-width: 90vw;
+        gap: 2rem;
+    }
+    
+    #skill-box {
+        width: 70vw;
+        height: auto;
+        padding: 1.5rem;
+        border-radius: 25px;
+        text-align: left;
+    }
+    
+    #skill-box img{
+        width: 25px;
+        height: 25px;
+    }
+    
+    #skill-box h2 {
+        font-size: 0.8rem;
+    }
+    
+    #skill-box p {
+        font-size: 0.5rem;
+    }
+    
+    .carrousel-bloc {
+        flex-direction: row;
+    }
+    
+    .carrousel-bloc img {
+        width: 60px;
+        height: 60px;
+        margin: 0 5px;
+    }
+    
+    .mainlogo {
+        width: 90px;
+        padding-bottom: 3em;
+    }
+
+    .carrousel-bloc button {
+        font-size: 0.5rem;
+        padding: 0.2em 0.5em;
+    }
+
+    .group-card-language{
+      gap: 3rem;
+      animation: slide-forever 35s linear infinite;
+    }
+
+    .card-language {
+      margin-top: 3rem;
+    }
+
+    .card-language img{
+      width: 45px;
+      height: 45px;
+      padding: 1rem;
+    }
+
+    #gridapp1 {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    #gridapp2 {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .dev-app-box {
+      width: 70vw;
+      height: 35vw;
+      justify-content: center;
+      margin: 2rem auto;
+    }
+
+    .dev-app-content{
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @keyframes slide-forever{
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-900%);
+      }
+    }
+}

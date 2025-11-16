@@ -1,0 +1,63 @@
+.accueil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  /* margin: 20px; */
+}
+
+.accueil-content {
+  padding: 2rem;
+  /* border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); */
+}
+
+.accueil-content img {
+  width: 300px;
+  height: 300px;
+  border-radius: 15%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  animation: bounceDown 3.2s ease-in-out infinite;
+}
+
+@keyframes bounceDown {
+  0%   { transform: translateY(-10px); opacity: 1; }
+  50%  { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-10px); opacity: 1; }
+}
+
+.discover-btn {
+  transition: transform 0.6s cubic-bezier(0.68,-0.55,0.27,1.55), opacity 0.6s;
+  background: #173651;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.7em 2em;
+  font-size: 1.2em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(75,171,255,0.2);
+}
+
+.discover-btn:hover {
+  background: #3399ff;
+  transition: 0.5s;
+}
+
+body.light-mode .discover-btn {
+  background: var(--couleur);
+  color: black;
+}
+
+body.light-mode .discover-btn:hover {
+  background: var(--couleur-tertiaire);
+}
+
+.discover-btn.animate {
+  transform: scale(1.15) translateY(-20px);
+  opacity: 0;
+}
